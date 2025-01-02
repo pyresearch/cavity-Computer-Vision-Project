@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - Cavity Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .detected-classes {
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .images-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .image-frame {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .image-frame img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .back-button {
+            margin-top: 20px;
+            background-color: #2575fc;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .back-button:hover {
+            background-color: #1b5ecb;
+        }
+    </style>
+</head>
+<body>
+    <h1>Detection Results</h1>
+    <div class="detected-classes">
+        Detected Classes: {{ detected_classes | join(', ') }}
+    </div>
+    <div class="images-container">
+        {% for path in result_paths %}
+        <div class="image-frame">
+            <img src="{{ url_for('static', filename='results/' + path) }}" alt="Annotated Frame">
+        </div>
+        {% endfor %}
+    </div>
+    <a href="/" class="back-button">Analyze Another Video</a>
+</body>
+</html>

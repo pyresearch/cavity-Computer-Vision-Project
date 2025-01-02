@@ -1,0 +1,105 @@
+/* static/css/styles.css */
+
+/* General Styles */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header and Footer */
+header, footer {
+    background: linear-gradient(90deg, #007bff, #6610f2);
+    color: white;
+    text-align: center;
+}
+
+header h1, footer p {
+    margin: 0;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Upload Form */
+.upload-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.upload-form label {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.upload-form input[type="file"] {
+    margin-bottom: 20px;
+}
+
+.upload-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Flash Messages */
+.alert-custom {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+/* Results Section */
+.results-section {
+    padding: 30px 0;
+}
+
+.detected-classes {
+    margin-bottom: 20px;
+}
+
+.detected-classes ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.detected-classes li {
+    background-color: #e9ecef;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Image Cards */
+.image-pair {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-pair img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+    .upload-form, .alert-custom {
+        margin: 20px;
+    }
+
+    .social-links a {
+        font-size: 14px;
+    }
+}
